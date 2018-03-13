@@ -742,7 +742,69 @@
         </div>
         
         <div class="lx_main_b">
-          
+          <div class="lx_loginbox">
+            <a href="">登录</a>
+            <a href="">注册</a>
+          </div>
+          <ul class="lx_service">
+            <li>
+              <a href="">
+                <i class="iconfont icon-zhengpinbaozhang"></i>
+                <p>正品保证</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="iconfont icon-servicebaoyouqia"></i>
+                <p>满399包邮</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="iconfont icon-tuihuochuli"></i>
+                <p>自由退货</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="iconfont icon-tianmaohuodaofukuan"></i>
+                <p>货到付款</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="lx_contact">
+            <li>
+              <a href="">
+                <i class="iconfont icon-web-icon-"></i>
+                <p class="">4001162228</p>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="iconfont icon-weixin"></i>
+                <p class="">scnmall</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="lx_pc">
+            <li>
+              <a href="">
+                <span>触屏版</span>
+                <i class="iconfont icon-shouji"></i>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <i class="iconfont icon-msnui-pc"></i>
+                <span>电脑版</span>
+              </a>
+            </li>
+          </ul>
+          <p class="lx_fankui">
+            ©2008-2015 s.cn&nbsp; 名鞋库 闽ICP备08106896号&nbsp;
+            <a href="">意见反馈</a>&nbsp;
+            <a href="">商圈</a>
+          </p>
         </div>
 
       </main>
@@ -750,27 +812,41 @@
       <footer id="lx_footer">
         <ul>
           <li class="active">
-            <i class="iconfont icon-home"></i>
-            <span>首页</span>
+            <a href="">
+              <i class="iconfont icon-home"></i>
+              <span>首页</span>
+            </a>
           </li>
           <li>
-            <i class="iconfont icon-pinpai"></i>
-            <span>品牌</span>
+            <a href="">
+              <i class="iconfont icon-pinpai"></i>
+              <span>品牌</span>
+            </a>
           </li>
           <li>
-            <i class="iconfont icon-tubiao13"></i>
-            <span>分类</span>
+            <a href="">
+              <i class="iconfont icon-tubiao13"></i>
+              <span>分类</span>
+            </a>
           </li>
           <li>
-            <i class="iconfont icon-gouwuche"></i>
-            <span>购物车</span>
+            <a href="">
+              <i class="iconfont icon-gouwuche"></i>
+              <span>购物车</span>
+            </a>
           </li>
           <li>
-            <i class="iconfont icon-wode"></i>
-            <span>我的</span>
+            <a href="">
+              <i class="iconfont icon-wode"></i>
+              <span>我的</span>
+            </a>
           </li>
         </ul>
       </footer>
+
+      <div class="lx_top">
+        <i class="iconfont icon-jiantou21"></i>
+      </div>
 
     </div>
 

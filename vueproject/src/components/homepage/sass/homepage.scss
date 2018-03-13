@@ -204,7 +204,7 @@
                   flex:1;
                   img{
                     width: 100%;
-                    height: 5.024155rem;
+                    // height: 5.024155rem;
                   }
                 }
                 .lx_brand{
@@ -228,7 +228,6 @@
               display: flex;
               width: 100%;
               flex-wrap:wrap;
-              // min-height:
               li{
                 width: 50%;
                 border:0.024155rem solid #e5e5e5;
@@ -246,6 +245,7 @@
                   img{
                     width: 4.396135rem;
                     height: 4.396135rem;
+                    margin: 0 auto;
                   }
                   .lx_xqing{
                     // height: 1.207729rem;
@@ -277,6 +277,117 @@
           }
           
         }
+        .lx_main_b{
+          width: 100%;
+          // height: 9.927536rem;
+          padding: 0.483092rem 0 1.400966rem 0;
+          background: #F0F0F0;
+          .lx_loginbox{
+            height: 1.062802rem;
+            padding:0 0.362319rem;
+            background: #f7f7f7;
+            line-height: 1.062802rem;
+            font-size: 0.338164rem;
+            border-top:1px solid #e3e3e3;
+            border-bottom:1px solid #e3e3e3;
+            a{
+              color: #06c;
+              padding-right: 0.241546rem;
+            }
+          }
+          .lx_service{
+            border-bottom:0.024155rem solid #dcdcdc;
+            font-size: 0.338164rem;
+            height: 2.270531rem;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            >li{
+              flex:1;
+              text-align: center;
+              a{
+                display: block;
+                color: #666;
+                p{
+                  padding-top: 0.241546rem;
+                }
+                i{
+                  color: #c0131b;
+                  font-size: 0.917874rem;
+                }
+              }
+            }
+          }
+          .lx_contact{
+            height: 2.028986rem;
+            display: flex;
+            align-items:center;
+            justify-content:flex-start;
+            padding:0 0.362319rem;
+            border-bottom:1px solid #e5e5e5;
+            li{
+              margin-right:1.594203rem;
+              a{
+                color: #646464;
+                font-size: 0.31401rem;
+                i{
+                  display: block;
+                  width: 0.772947rem;
+                  height: 0.772947rem;
+                  border-radius:0.193237rem;
+                  background: #00b6ef;
+                  font-size: 0.724638rem;
+                  color: #fff;
+                }
+              }
+              &:first-child{
+                a{
+                  color: #C00;
+                  i{
+                    background: #fc4f59;
+                  }
+                }
+              }
+            }
+          }
+          .lx_pc{
+            height: 1.352657rem;
+            display: flex;
+            align-items:center;
+            // justify-content:between;
+            margin-bottom: 0.289855rem;
+            li{
+              // float: left;
+              flex:1;
+              height: 1.014493rem;
+              text-align: center;
+              background: #DCDCDC;
+              line-height: 1.014493rem;
+              border-radius:0.072464rem;
+              font-size: 0.338164rem;
+              &:first-child{
+                margin-right:0.144928rem;
+              }
+              a{
+                color: #666;
+                i{
+                  font-size: 0.386473rem;
+                }
+              }
+            }
+          }
+          .lx_fankui{
+            // height: 0.724638rem;
+            padding:0 0.362319rem;
+            font-size: 0.338164rem;
+            line-height: 0.555556rem;
+            color: #999;
+            text-align: center;
+            a{
+              color: #999;
+            }
+          }
+        }
     }
 
     #lx_footer{
@@ -286,25 +397,48 @@
         position: fixed;
         bottom:0;
         ul{
-          height: 1.207729rem;
           display: flex;
           li{
             flex:1;
             text-align: center;
-            display:flex;
-            flex-direction: column;
-            justify-content:center;
             font-size: 0.31401rem;
-            color: #717075;
-            &.active{
-              color: #EA4B47;
+            a{
+              display: block;
+              display:flex;
+              height: 1.207729rem;
+              flex-direction: column;
+              justify-content:center;
+              color: #717075;
+              i{
+                font-size: 0.507246rem;
+                font-weight: bold;
+              }
             }
-            i{
-              font-size: 0.507246rem;
-              font-weight: bold;
+            &.active{
+              a{
+                color: #EA4B47;
+              }
             }
           }
         }
-        
+    }
+
+    .lx_top{
+      width: 0.869565rem;
+      height: 0.869565rem;
+      border-radius:50%;
+      position: fixed;
+      right:0.144928rem;
+      bottom:1.352657rem;
+      cursor:pointer;
+      background: #fff;
+      opacity: .8;
+      border:1px solid #e5e5e5;
+      i{
+        position: absolute;
+        top:0;
+        left:0.048309rem;
+        font-size: 0.772947rem;
+      }
     }
 }
