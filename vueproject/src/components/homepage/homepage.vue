@@ -38,11 +38,713 @@
 
       <main id="lx_main">
         <div class="lx_m_img">
+          <img src="./img/lx_zhiIN.jpg" alt="" />
           <img src="./img/lx_jianhuo.jpg" alt="" />
           <img src="./img/lx_jxpinpai.jpg" alt="" />
-          <img src="./img/lx_zhiIN.jpg" alt="" />
         </div>
         
+        <div class="lx_main_content">
+
+        <!--               跑步鞋              -->
+          <div class="lx_main_classify">
+            <div class="lx_content_t">
+              <div class="lx_content_title">
+                <p>跑步鞋</p>
+                <span>RUNNING</span>
+              </div>
+              <div class="lx_classify">
+                <div class="lx_show">
+                  <a href=""><img src="./img/lx_show1.jpg" alt="" /></a>
+                </div>
+                <ul class="lx_brand">
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify2.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify3.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify4.jpg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+            <ul class="lx_content_b">
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--               休闲鞋              -->
+          <div class="lx_main_classify">
+            <div class="lx_content_t">
+              <div class="lx_content_title">
+                <p>休闲鞋</p>
+                <span>CASUAL SHOES</span>
+              </div>
+              <div class="lx_classify">
+                <div class="lx_show">
+                  <a href=""><img src="./img/lx_show1.jpg" alt="" /></a>
+                </div>
+                <ul class="lx_brand">
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify2.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify3.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify4.jpg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+            <ul class="lx_content_b">
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--               休闲服              -->
+          <div class="lx_main_classify">
+            <div class="lx_content_t">
+              <div class="lx_content_title">
+                <p>休闲服</p>
+                <span>ATHLETIC WEAR</span>
+              </div>
+              <div class="lx_classify">
+                <div class="lx_show">
+                  <a href=""><img src="./img/lx_show1.jpg" alt="" /></a>
+                </div>
+                <ul class="lx_brand">
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify2.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify3.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify4.jpg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+            <ul class="lx_content_b">
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--               篮球鞋              -->
+          <div class="lx_main_classify">
+            <div class="lx_content_t">
+              <div class="lx_content_title">
+                <p>篮球鞋</p>
+                <span>BASKETBALL</span>
+              </div>
+              <div class="lx_classify">
+                <div class="lx_show">
+                  <a href=""><img src="./img/lx_show1.jpg" alt="" /></a>
+                </div>
+                <ul class="lx_brand">
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify2.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify3.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify4.jpg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+            <ul class="lx_content_b">
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--               足球鞋              -->
+          <div class="lx_main_classify">
+            <div class="lx_content_t">
+              <div class="lx_content_title">
+                <p>足球鞋</p>
+                <span>FOOTBALL</span>
+              </div>
+              <div class="lx_classify">
+                <div class="lx_show">
+                  <a href=""><img src="./img/lx_show1.jpg" alt="" /></a>
+                </div>
+                <ul class="lx_brand">
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify2.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify3.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify4.jpg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+            <ul class="lx_content_b">
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--               儿童              -->
+          <div class="lx_main_classify">
+            <div class="lx_content_t">
+              <div class="lx_content_title">
+                <p>儿童</p>
+                <span>CHILDREN</span>
+              </div>
+              <div class="lx_classify">
+                <div class="lx_show">
+                  <a href=""><img src="./img/lx_show1.jpg" alt="" /></a>
+                </div>
+                <ul class="lx_brand">
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify2.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify3.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify4.jpg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+            <ul class="lx_content_b">
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!--               包包              -->
+          <div class="lx_main_classify">
+            <div class="lx_content_t">
+              <div class="lx_content_title">
+                <p>包包</p>
+                <span>BAG</span>
+              </div>
+              <div class="lx_classify">
+                <div class="lx_show">
+                  <a href=""><img src="./img/lx_show1.jpg" alt="" /></a>
+                </div>
+                <ul class="lx_brand">
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify1.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify2.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify3.jpg" alt="" />
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/lx_classify4.jpg" alt="" />
+                    </a>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+            <ul class="lx_content_b">
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content1.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色+碳黑</p>
+                    <span class="ls_sale">￥569</span>
+                    <span class="ls_old_price">￥899</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content2.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 1号黑色</p>
+                    <span class="ls_sale">￥299</span>
+                    <span class="ls_old_price">￥499</span>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="./img/lx_content3.jpg" alt="" />
+                  <div class="lx_xqing">
+                    <p class="lx_goods_title">adidas阿迪达斯 跑步鞋 男 一号黑色+亮白+石墨黑</p>
+                    <span class="ls_sale">￥399</span>
+                    <span class="ls_old_price">￥829</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        
+        <div class="lx_main_b">
+          
+        </div>
+
       </main>
 
       <footer id="lx_footer">

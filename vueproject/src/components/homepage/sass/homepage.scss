@@ -170,13 +170,112 @@
     #lx_main{
         width: 100%;
         flex:1;
-        // display: flex;
+        display: flex;
+        flex-direction: column;
         overflow-x:hidden;
-        background: pink;
+        background: #E6E6E6;
         .lx_m_img{
           img{
             width: 100%;
           }
+        }
+        .lx_main_content{
+          flex:1;
+          .lx_main_classify{
+            .lx_content_t{
+              .lx_content_title{
+                width: 100%;
+                height: 1.207729rem;
+                background: #B4000B;
+                color:#fff;
+                font-size: 0.434783rem;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content:center;
+                span{
+                  font-size: 0.289855rem;
+                }
+              }
+              .lx_classify{
+                display:flex;
+                height: 5.024155rem;
+                .lx_show{
+                  flex:1;
+                  img{
+                    width: 100%;
+                    height: 5.024155rem;
+                  }
+                }
+                .lx_brand{
+                  flex:2;
+                  display:flex;
+                  flex-wrap: wrap;
+                  li{
+                    width: 50%;
+                    a{
+                      // width: 100%;
+                      img{
+                        width: 100%;
+                        height: 2.512077rem;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .lx_content_b{
+              display: flex;
+              width: 100%;
+              flex-wrap:wrap;
+              // min-height:
+              li{
+                width: 50%;
+                border:0.024155rem solid #e5e5e5;
+                border-top: 0 none;
+                border-left: 0 none;
+                background: #fff;
+                // min-height:1.207729rem;
+                a{
+                  display: block;
+                  width: 100%;
+                  // height: 6.570048rem;
+                  color: #333;
+                  padding: 0 0.289855rem;
+                  font-size: 0.362319rem;
+                  img{
+                    width: 4.396135rem;
+                    height: 4.396135rem;
+                  }
+                  .lx_xqing{
+                    // height: 1.207729rem;
+                    .lx_goods_title{
+                      line-height: 0.483092rem;
+                      // white-space:nowrap;
+                      // overflow: hidden;
+                      // text-overflow: ellipsis;
+                    }
+                    span{
+                      display: inline-block;
+                      &.ls_sale{
+                        color: #c00;
+                        font-size: 0.434783rem;
+                        font-weight: bold;
+                        margin: 0.15rem 0.3rem 0.15rem 0;
+                      }
+                      &.ls_old_price{
+                        color: #999;
+                        font-size: 0.338164rem;
+                        text-decoration:line-through;
+                      }
+                    }
+                    
+                  }
+                }
+              }
+            }
+          }
+          
         }
     }
 
