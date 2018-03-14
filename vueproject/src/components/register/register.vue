@@ -1,15 +1,33 @@
 <template>
    <div>
-       <h1>{{text}}</h1>
-       <p>{{get_msg}}</p>
-       <p></p>
-       <button @click='getmsg'>get请求点我</button>
-       <button @click="postmsg">post请求点我</button>
+      
+      <div class="lx_register">
+        
+        <header id="lx_r_head">
+          <a class="lx_reg_back" href="">返回</a>
+          <p>名鞋库-用户注册</p>
+          <a class="lx_reg_log" href="">登录</a>
+        </header>
+
+        <main id="lx_reg_box">
+          <form id="lx_reg_form" name="lx_reg_form" action="">
+            <input id="lx_username" name="lx_username" type="phone" placeholder="请输入手机号" />
+            <p class="lx_reg_tishi">请输入正确的手机号</p>
+            <input id="lx_pwd" name="lx_pwd" type="password" placeholder="请输入密码" />
+            <input id="lx_regbtn" name="lx_regbtn" type="button" value="注册" />
+          </form>
+        </main>
+
+      </div>
 
    </div>
 </template>
 
 <script>
+
+  import '../homepage/base.css'
+  import './register.scss'
+
    export default{
        data(){
            return{

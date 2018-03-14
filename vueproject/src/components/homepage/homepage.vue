@@ -801,7 +801,7 @@
             </li>
           </ul>
           <p class="lx_fankui">
-            ©2008-2015 s.cn&nbsp; 名鞋库 闽ICP备08106896号&nbsp;
+            ©2008-2015 s.cn&nbsp; 名鞋库 &nbsp;闽ICP备08106896号&nbsp;
             <a href="">意见反馈</a>&nbsp;
             <a href="">商圈</a>
           </p>
@@ -857,11 +857,9 @@
 
 <script>
 
-  import './css/base.css'
-  import './sass/homepage.scss'
+  import './base.css'
+  import './homepage.scss'
   // import './js/homepage.js'
-  // import './lib/flexible.debug.js'
-  // import './lib/flexible_css.debug.js'
 
   export default{
       data(){

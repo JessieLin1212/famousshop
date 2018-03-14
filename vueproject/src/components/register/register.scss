@@ -1,0 +1,61 @@
+body{
+    background: #F0F0F0;
+}
+.lx_register{
+    width: 100%;
+    height: 100%;
+    #lx_r_head{
+        width: 100%;
+        height: 0.354267rem;
+        line-height: 0.354267rem;
+        color: #666;
+        display:flex;
+        justify-content:space-between;
+        text-align: center;
+        font-size: 0.112721rem;
+        a{
+            display: block;
+            width: 0.483092rem;
+            height: 0.354267rem;
+            background: #F6F5F3;
+            text-decoration:none;
+            color: #333;
+            &.lx_reg_log{
+                color: #e98686;
+                background: #FFE5E6;
+            }
+        }
+    }
+    #lx_reg_box{
+        width: 100%;
+        // height: 2.004831rem;
+        background: url("./img/lx_reg_bg.jpg") center center no-repeat;
+        background-sizing:center;
+        padding:0.161031rem;
+        #lx_username,#lx_pwd,#lx_regbtn{
+            width: 100%;
+            height: 0.378422rem;
+            line-height: 0.378422rem;
+            border-radius:0.040258rem;
+            margin-bottom: 0.040258rem;
+            padding-left:0.080515rem;
+            color: #C7CBCC;
+            background: rgba(246,245,243,.8);
+            font-size: 0.128824rem;
+        }
+        #lx_regbtn{
+            background: #6DB248;
+            color:#fff;
+            margin-top: 0.080515rem;
+        }
+        p{
+            color:#e98686;
+            font-size: 0.112721rem;
+            font-weight: bold;
+            margin: 0.040258rem 0;
+            &.lx_reg_tishi{
+                display:none;
+            }
+        }
+    }
+}
