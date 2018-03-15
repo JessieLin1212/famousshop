@@ -74,8 +74,12 @@
                     console.log(username,password);
                     http.post('register',{username,password}).then(res=>{
                       console.log(res);
-                      if(res.data.result.ok==1&&res.data.result.n==1){
-                        router.push('/HomePage');
+                      if(res.data.status!=false){
+                        if(res.data.result.ok==1&&res.data.result.n==1){
+                          router.push('/HomePage');
+                        }
+                      }else{
+                        window.alert('用户名已存在！')
                       }
                     })
                 }

@@ -272,19 +272,19 @@
       <footer id="lx_footer">
         <ul>
           <li class="active">
-            <router-link to="HomePage" href="">
+            <router-link to="" href="">
               <i class="iconfont icon-home"></i>
               <span>首页</span>
             </router-link>
           </li>
           <li>
-            <router-link to="ListPage" href="">
+            <router-link to="/ListPage" href="">
               <i class="iconfont icon-pinpai"></i>
               <span>品牌</span>
             </router-link>
           </li>
           <li>
-            <router-link to="ListPage" href="">
+            <router-link to="/ListPage" href="">
               <i class="iconfont icon-tubiao13"></i>
               <span>分类</span>
             </router-link>
@@ -400,10 +400,7 @@
               console.log(id);
               window.sessionStorage.setItem('objid',id)
               // location.href = 'detail'+ '?' + id;
-              this.$router.push({
-                name:'Detail',
-                params:{datd_id:'id'}
-              })
+              this.$router.push({path:'Detail'})
           }
       },
       mounted(){

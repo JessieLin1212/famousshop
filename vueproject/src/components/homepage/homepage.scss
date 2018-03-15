@@ -65,6 +65,8 @@
         align-items:center;
         .lx_logo{
           margin:0 0.048309rem 0 0.048309rem;
+          display:flex;
+          align-items:center;
           i{
             display: inline-block;
             width: 0.523349rem;
@@ -85,7 +87,7 @@
             padding-left: 0.1rem;
             margin-right:0.008052rem;
             color: #7A7176;
-            font-size: 0.128824rem;
+            font-size: 0.120773rem;
             line-height: 0.273752rem;
           }
           .lx_search_btn{
@@ -97,8 +99,8 @@
             i{
               position: absolute;
               font-size: 0.241546rem;
-              top:-0.032206rem;
-              left:0.056361rem;
+              top:-0.008052rem;
+              left:0.040258rem;
               color: #979797;
               font-weight: bold;
             }
@@ -107,6 +109,7 @@
         .lx_menu{
           display:block;
           margin:0 0.048309rem 0 0.080515rem;
+          padding-top:0.040258rem;
           i{
             display: inline-block;
             width: 0.386473rem;
@@ -398,8 +401,8 @@
       border:1px solid #e5e5e5;
       i{
         position: absolute;
-        top:-0.024155rem;
-        left:0.016103rem;
+        top: 0;
+        left: 0.016103rem;
         font-size: 0.241546rem;
       }
     }

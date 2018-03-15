@@ -7,9 +7,11 @@ import Login from '../components/login/Login'
 import reg from '../components/register/reg.vue'
 import HomePage from '../components/homepage/homepage'
 import Detail from '../components/detail/detail'
-import ListPage from '../components/listpage/listpage'
-import mj_shoppingcart from '../components/shoppingcart/shoppingcart'
-import cart_cheackout from '../components/shoppingcart/cart_cheackout.vue'
+import ListPage from '../components/listpage/listpage.vue'
+// import mj_shoppingcart from '../components/shoppingcart/shoppingcart'
+// import cart_cheackout from '../components/shoppingcart/cart_cheackout.vue'
+import Listdetail from '../components/listdetail/listdetail.vue'
+
 Vue.use(VueRouter);
 Vue.use(ElementUi);
 Vue.use(VueTouch, {name: 'v-touch'})
@@ -41,16 +43,22 @@ const router = new VueRouter({
                name:'ListPage',
                component:ListPage,
            },
+           // {
+           //    path:'/shoppingcart',
+           //    name:'shoppingcart',
+           //    component:mj_shoppingcart
+           // },
+           // {
+           //    path:'/cart_cheackout',
+           //    name:'cart_cheackout',
+           //    component:cart_cheackout
+           // },
            {
-              path:'/shoppingcart',
-              name:'shoppingcart',
-              component:mj_shoppingcart
+              path:'/Listdetail',
+              name:'Listdetail',
+              component:Listdetail,
            },
-           {
-              path:'/cart_cheackout',
-              name:'cart_cheackout',
-              component:cart_cheackout
-           }
+
        ]
 })
 
