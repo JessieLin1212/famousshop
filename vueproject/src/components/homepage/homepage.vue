@@ -70,7 +70,7 @@
             </div>
 
             <ul class="lx_content_b">
-              <li v-for="(obj,key) in paobuxie" :data-id="obj._id">
+              <li v-for="(obj,key) in paobuxie" :data-id="obj._id" @click="param(obj._id)">
                 <router-link to="" href="">
                   <img :src="imgurl + 'img/' + obj.url" alt=""/>
                   <div class="lx_xqing">
@@ -133,7 +133,7 @@
             </div>
 
             <ul class="lx_content_b">
-              <li v-for="(obj,key) in xiuxianxie" :data-id="obj._id">
+              <li v-for="(obj,key) in xiuxianxie" :data-id="obj._id" @click="param(obj._id)">
                 <router-link to="" href="">
                   <img :src="imgurl + 'img/' + obj.url" alt=""/>
                   <div class="lx_xqing">
@@ -185,7 +185,7 @@
             </div>
 
             <ul class="lx_content_b">
-              <li v-for="(obj,key) in lanqiuxie" :data-id="obj._id">
+              <li v-for="(obj,key) in lanqiuxie" :data-id="obj._id" @click="param(obj._id)">
                 <router-link to="" href="">
                   <img :src="imgurl + 'img/' + obj.url" alt=""/>
                   <div class="lx_xqing">
@@ -320,6 +320,7 @@
   import './base.css'
   import './homepage.scss'
   import http from '../../httpClient/httpClient.js'
+  import router from '../../router/index.js'
 
   export default{
       data(){
@@ -394,6 +395,14 @@
                   }
                   window.scrollBy(0,-speed);
               },30);
+          },
+          param(id){
+              console.log(id);
+              // location.href = 'detail'+ '?' + id;
+              this.$router.push({
+                name:'Detail',
+                params:{datd_id:'id'}
+              })
           }
       },
       mounted(){

@@ -12,7 +12,8 @@
           <form id="lx_reg_form" name="lx_reg_form" action="">
             <input id="lx_username" name="lx_username" type="phone" placeholder="请输入手机号" ref="lx_phone" @change="phonenum"/>
             <p ref="lx_r_ts" class="lx_reg_tishi">请输入正确的手机号</p>
-            <input ref="lx_pwd" id="lx_pwd" name="lx_pwd" type="password" placeholder="请输入密码" />
+            <input ref="lx_pwd" id="lx_pwd" name="lx_pwd" type="password" placeholder="请输入密码  (以字母开头,长度为6-20)" />
+            <p ref="lx_r_ts2" class="lx_reg_tishi">密码格式错误</p>
             <input @click="reg" id="lx_regbtn" name="lx_regbtn" type="button" value="注册" />
           </form>
         </main>
@@ -52,14 +53,25 @@
               }else{
                 this.ok = true;
                 lx_r_ts.className = 'lx_reg_tishi';
-              }
+              };
 
            },
            reg(){
                 var username = this.$refs.lx_phone.value;
                 var password = this.$refs.lx_pwd.value;
-                console.log(username,password);
+                var lx_r_ts2 = this.$refs.lx_r_ts2;
+                // console.log(lx_r_ts2);
+                if(!/^[a-z][a-z0-9\-]{2,19}$/.test(password)){
+                    lx_r_ts2.className = '';
+                    this.ok = false;
+                }else{
+                  this.ok = true;
+                  lx_r_ts2.className = 'lx_reg_tishi';
+                };
+
+                // console.log(this);
                 if(this.ok){
+                    console.log(username,password);
                     http.post('register',{username,password}).then(res=>{
                       console.log(res);
                       if(res.data.result.ok==1&&res.data.result.n==1){
