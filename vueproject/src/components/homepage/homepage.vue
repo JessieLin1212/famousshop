@@ -12,9 +12,9 @@
           <input class="lx_search_c" name="lx_search_n" type="search" placeholder="输入关键字搜索"/>
           <button class="lx_search_btn"><i class="iconfont icon-fangdajing"></i></button>
         </form>
-        <div class="lx_menu">
+        <router-link to="ListPage" class="lx_menu">
           <i class="iconfont icon-tubiao13"></i>
-        </div>
+        </router-link>
       </header>
 
       <div id="lx_banner">

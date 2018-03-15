@@ -16,7 +16,7 @@
           </ul>
           <form id="lx_login_form" name="lx_login_form" action="">
             <input id="lx_login_username" name="lx_login_username" ref="lx_login_username" type="phone" placeholder="请输入手机号" />
-            <p class="lx_login_tishi">用户名或密码错误</p>
+            <p ref="lx_login_ts" class="lx_login_tishi">用户名或密码错误</p>
             <input id="lx_login_pwd" ref="lx_login_pwd" name="lx_login_pwd" type="password" placeholder="请输入您的密码" />
             <input id="lx_mdl" name="lx_mdl" checked type="checkbox" /><label for="lx_mdl">一个月内免登录</label>
             <span>忘记密码？</span>
@@ -51,12 +51,17 @@
            login(){
                 var username = this.$refs.lx_login_username.value;
                 var password = this.$refs.lx_login_pwd.value;
+                var tishi = this.$refs.lx_login_ts;
+                
                 // console.log(lx_login_pwd);
                 http.post('login',{username,password}).then(res=>{
                   console.log(res);
                   if(res.data.status){
                     window.sessionStorage.setItem('lx_token',res.data.data);
                     router.push('/HomePage');
+                    tishi.className = 'lx_login_tishi';
+                  }else{
+                    tishi.className = '';
                   }
                 })
            }
