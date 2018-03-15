@@ -304,7 +304,7 @@
         </ul>
       </footer>
 
-      <div class="lx_top" @click="totop">
+      <div ref="lx_totop" class="lx_top" @click="totop">
         <i class="iconfont icon-jiantou21"></i>
       </div>
 
@@ -397,6 +397,21 @@
           }
       },
       mounted(){
+
+        let top = this.$refs.lx_totop;
+        window.onscroll = function(){
+
+            // 获取滚动条滚动果的距离
+            let scrollTop = window.scrollY;
+
+            // 滚动到700时显示返回顶部效果
+            if(scrollTop >= 331){
+                top.style.display = 'block';
+            }else{
+                top.style.display = 'none';
+            }
+        }
+
         http.post('getallproducts').then(res=>{
           console.log(res);
           for(var i=0; i<res.data.length;i++){
