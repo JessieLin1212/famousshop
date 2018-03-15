@@ -18,16 +18,9 @@
       </header>
 
       <div id="lx_banner">
-          <!-- <div class="container clearfix"> -->
-            <div class="lx_banner">
-              <ul>
-                <li><img src="./img/lx_banner1.jpg" alt="" /></li>
-                <li><img src="./img/lx_banner2.jpg" alt="" /></li>
-                <li><img src="./img/lx_banner3.jpg" alt="" /></li>
-                <li><img src="./img/lx_banner4.jpg" alt="" /></li>
-              </ul>
-            </div>
-          <!-- </div> -->
+        <div class="lunbo">
+          <slider :pages="pages" :sliderinit="sliderinit"></slider>
+        </div>
       </div>
 
       <main id="lx_main">
@@ -77,7 +70,7 @@
             </div>
 
             <ul class="lx_content_b">
-              <li v-for="(obj,key) in paobuxie">
+              <li v-for="(obj,key) in paobuxie" :data-id="obj._id">
                 <router-link to="" href="">
                   <img :src="imgurl + 'img/' + obj.url" alt=""/>
                   <div class="lx_xqing">
@@ -140,7 +133,7 @@
             </div>
 
             <ul class="lx_content_b">
-              <li v-for="(obj,key) in xiuxianxie">
+              <li v-for="(obj,key) in xiuxianxie" :data-id="obj._id">
                 <router-link to="" href="">
                   <img :src="imgurl + 'img/' + obj.url" alt=""/>
                   <div class="lx_xqing">
@@ -192,7 +185,7 @@
             </div>
 
             <ul class="lx_content_b">
-              <li v-for="(obj,key) in lanqiuxie">
+              <li v-for="(obj,key) in lanqiuxie" :data-id="obj._id">
                 <router-link to="" href="">
                   <img :src="imgurl + 'img/' + obj.url" alt=""/>
                   <div class="lx_xqing">
@@ -210,8 +203,8 @@
         
         <div class="lx_main_b">
           <div class="lx_loginbox">
-            <router-link to="" href="">登录</router-link>
-            <router-link to="" href="">注册</router-link>
+            <router-link to="/Login" href="">登录</router-link>
+            <router-link to="/reg" href="">注册</router-link>
           </div>
           <ul class="lx_service">
             <li>
@@ -279,31 +272,31 @@
       <footer id="lx_footer">
         <ul>
           <li class="active">
-            <router-link to="" href="">
+            <router-link to="HomePage" href="">
               <i class="iconfont icon-home"></i>
               <span>首页</span>
             </router-link>
           </li>
           <li>
-            <router-link to="" href="">
+            <router-link to="ListPage" href="">
               <i class="iconfont icon-pinpai"></i>
               <span>品牌</span>
             </router-link>
           </li>
           <li>
-            <router-link to="" href="">
+            <router-link to="ListPage" href="">
               <i class="iconfont icon-tubiao13"></i>
               <span>分类</span>
             </router-link>
           </li>
           <li>
-            <router-link to="" href="">
+            <router-link to="shoppingcart" href="">
               <i class="iconfont icon-gouwuche"></i>
               <span>购物车</span>
             </router-link>
           </li>
           <li>
-            <router-link to="" href="">
+            <router-link to="Login" href="">
               <i class="iconfont icon-wode"></i>
               <span>我的</span>
             </router-link>
@@ -323,11 +316,10 @@
 
 
 <script>
-
+  import slider from 'vue-concise-slider'// 引入slider组件
   import './base.css'
   import './homepage.scss'
   import http from '../../httpClient/httpClient.js'
-  // import './js/homepage.js'
 
   export default{
       data(){
@@ -336,8 +328,49 @@
               paobuxie:[],
               xiuxianxie:[],
               lanqiuxie:[],
-              imgurl:'/src/components/homepage/'
+              imgurl:'/src/components/homepage/',
+              pages:[
+                   {
+                      title: '1',
+                      style:{
+                          background:"url(/src/components/homepage/img/lx_banner1.jpg)",
+                      }
+                  },
+                  {
+                      title: '2',
+                      style:{
+                          background:"url(/src/components/homepage/img/lx_banner2.jpg)",
+                      }
+                  },
+                  {
+                      title: 'slide3',
+                      style:{
+                          background:"url(/src/components/homepage/img/lx_banner3.jpg)",
+                      },
+                  },
+                  {
+                      title: 'slide3',
+                      style:{
+                          background:"url(/src/components/homepage/img/lx_banner4.jpg)",
+                      },
+                  }
+              ],
+              //滑动配置[obj]
+              sliderinit: {
+                  currentPage: 0,//当前页码
+                  thresholdDistance: 500,//滑动判定距离
+                  thresholdTime: 2000,//滑动判定时间
+                  autoplay:2000,//自动滚动[ms]
+                  loop:true,//循环滚动
+                  direction:'horizontal',//方向设置，垂直滚动
+                  infinite:1,//无限滚动前后遍历数
+                  slidesToScroll:1,//每次滑动项数
+              }
           }
+      },
+   
+      components: {
+          slider
       },
       methods:{
           getmsg(){
@@ -348,6 +381,19 @@
           },
           totop(){
 
+              let timer = setInterval(function(){
+
+                  // 滚动过的距离越大，返回越快
+                  let scrollTop = window.scrollY;
+
+                  // 速度
+                  let speed = Math.floor(scrollTop/10);
+
+                  if(scrollTop<=10 || speed === 0){
+                      clearInterval(timer);
+                  }
+                  window.scrollBy(0,-speed);
+              },30);
           }
       },
       mounted(){
