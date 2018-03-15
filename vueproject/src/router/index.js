@@ -4,7 +4,7 @@ import ElementUi from 'element-ui'
 import VueTouch from 'vue-touch'
 
 import Login from '../components/login/Login'
-import Register from '../components/register/register'
+import reg from '../components/register/reg.vue'
 import HomePage from '../components/homepage/homepage'
 import Detail from '../components/detail/detail'
 import ListPage from '../components/listpage/listpage'
@@ -22,9 +22,9 @@ const router = new VueRouter({
                component:Login
            },
            {
-               path:'/Register',
-               name:'Register',
-               component:Register
+               path:'/reg',
+               name:'reg',
+               component:reg
            },
            {
                path:'/HomePage',

@@ -4,9 +4,9 @@
       <div class="lx_login">
         
         <header id="lx_l_head">
-          <a class="lx_reg_back" href="">返回</a>
+          <router-link to="/HomePage" class="lx_reg_back" href="">返回</router-link>
           <p>名鞋库-用户登录</p>
-          <a class="lx_login_log" href="">注册</a>
+          <router-link to="/reg" class="lx_login_log" href="">注册</router-link>
         </header>
 
         <main id="lx_login_box">
@@ -15,12 +15,12 @@
             <li>短信验证登录</li>
           </ul>
           <form id="lx_login_form" name="lx_login_form" action="">
-            <input id="lx_login_username" name="lx_login_username" type="phone" placeholder="请输入手机号" />
+            <input id="lx_login_username" name="lx_login_username" ref="lx_login_username" type="phone" placeholder="请输入手机号" />
             <p class="lx_login_tishi">用户名或密码错误</p>
-            <input id="lx_login_pwd" name="lx_login_pwd" type="password" placeholder="请输入您的密码" />
+            <input id="lx_login_pwd" ref="lx_login_pwd" name="lx_login_pwd" type="password" placeholder="请输入您的密码" />
             <input id="lx_mdl" name="lx_mdl" checked type="checkbox" /><label for="lx_mdl">一个月内免登录</label>
             <span>忘记密码？</span>
-            <input id="lx_login_btn" name="lx_login_btn" type="button" value="登录" />
+            <input id="lx_login_btn" name="lx_login_btn" type="button" value="登录" @click="login" />
           </form>
         </main>
   
@@ -33,7 +33,8 @@
 
   import '../homepage/base.css'
   import './login.scss'
-
+  import http from '../../httpClient/httpClient.js';
+  import router from '../../router/index.js'
    export default{
        data(){
            return{
@@ -46,6 +47,18 @@
            },
            postmsg(){
                this.$store.dispatch('getmsg_post',{path:'product',msg:{houseOwner:'Kemo'}});
+           },
+           login(){
+                var username = this.$refs.lx_login_username.value;
+                var password = this.$refs.lx_login_pwd.value;
+                // console.log(lx_login_pwd);
+                http.post('login',{username,password}).then(res=>{
+                  console.log(res);
+                  if(res.data.status){
+                    window.sessionStorage.setItem('lx_token',res.data.data);
+                    router.push('/HomePage');
+                  }
+                })
            }
        },
        computed:{

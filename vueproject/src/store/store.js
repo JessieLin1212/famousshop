@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import httpClient from '../httpClient/httpClient'
+import httpClient from '../httpClient/httpClient';
 
 Vue.use(Vuex);
 
@@ -10,8 +10,6 @@ var store = new Vuex.Store({
        password:0,
        getmsg_get:0,
        getmsg_post:0
-
-
    },
    getters:{
        getmsg_get(state){
@@ -43,6 +41,7 @@ var store = new Vuex.Store({
            });
        }
    }
+
 })
 
 export default store;
