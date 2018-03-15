@@ -398,6 +398,7 @@
           },
           param(id){
               console.log(id);
+              window.sessionStorage.setItem('objid',id)
               // location.href = 'detail'+ '?' + id;
               this.$router.push({
                 name:'Detail',
