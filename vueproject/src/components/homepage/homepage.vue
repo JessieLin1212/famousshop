@@ -290,7 +290,7 @@
             </router-link>
           </li>
           <li>
-            <router-link to="shoppingcart" href="">
+            <router-link to="/shoppingcart" href="">
               <i class="iconfont icon-gouwuche"></i>
               <span>购物车</span>
             </router-link>

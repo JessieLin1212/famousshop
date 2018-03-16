@@ -4,8 +4,54 @@
     display:flex;
     flex-direction:column;
     font-size:0.128824rem;
+    
+    
+   #cover{
+    position: fixed; 
+    top: 0; left: 0;
+    right: 0;bottom: 0;
+    background:rgba(0,0,0,.6);
+    z-index:1000;
+    p{
 
+        display:flex;
+        flex-direction:column;
+        background: #fff;
+        height:1.610306rem;
+        width: 100%;
+        position:absolute;
+        top:50%;
+        margin-top:-0.805153rem;
+        justify-content:space-around;
+        // align-content:center;
+        span{text-align:center;}
+        .box1{
+            background:#f5f5f5;
+            flex:1;
+            line-height: 1.127214rem;
+            font-size: 0.161031rem;
+            color:#a94442;
+        }
+        .box2{
+           display:flex;
+           height:0.483092rem;
+           // line-height: 0.322061rem;
+           justify-content:space-around;
+           b{
+            flex:1;
+            color:#fff;
+            line-height: 0.483092rem;
+            background: #9d9d9d;
+            &:last-child{
+                background:#31708f;
 
+            }
+           }
+
+        }
+
+    }
+}
     #detailheader{
         height: 0.354267rem;
        background: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(#f1f1f1));

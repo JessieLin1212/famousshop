@@ -23,8 +23,15 @@
             <input id="lx_login_btn" name="lx_login_btn" type="button" value="登录" @click="login" />
           </form>
         </main>
-  
+        
+        <div ref="lx_tanchuang" class="lx_tanchuang">
+          <div class="lx_l_tishi">登录成功！</div>
+          <div class="lx_queren" @click="$router.push({path:'/Detail'})">确定</div>
+        </div> 
+
       </div>
+
+           
 
    </div>
 </template>
@@ -36,6 +43,9 @@
   import http from '../../httpClient/httpClient.js';
   import router from '../../router/index.js'
    export default{
+       mounted(){
+          window.sessionStorage.removeItem('username');
+       },
        data(){
            return{
                text:'这是登录组件',
@@ -52,15 +62,18 @@
                 var username = this.$refs.lx_login_username.value;
                 var password = this.$refs.lx_login_pwd.value;
                 var tishi = this.$refs.lx_login_ts;
-                
+                var lx_tanchuang = this.$refs.lx_tanchuang;
                 // console.log(lx_login_pwd);
                 http.post('login',{username,password}).then(res=>{
                   console.log(res);
                   if(res.data.status){
                     window.sessionStorage.setItem('lx_token',res.data.data);
-                    router.push('/HomePage');
+                    window.sessionStorage.setItem('username',username);
+                    lx_tanchuang.style.display = 'block';
+                    // router.push('/HomePage');
                     tishi.className = 'lx_login_tishi';
                   }else{
+                    window.sessionStorage.removeItem('username');
                     tishi.className = '';
                   }
                 })

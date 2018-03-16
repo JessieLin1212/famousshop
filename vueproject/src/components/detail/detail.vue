@@ -74,9 +74,15 @@
         <div id="detailfooter">
             <p><span class="iconfont icon-kefu"></span><span>客服</span></p>
             <p @click="$router.push({path:'/HomePage'})"><span class="iconfont icon-shouye"></span><span>首页</span></p>
-            <p><span class="iconfont icon-gouwuche"></span><span>购物车</span></p>
+            <p @click="$router.push({path:'/shoppingcart'})"><span class="iconfont icon-gouwuche"></span><span>购物车</span></p>
             <b @click="carlist">加入购物车</b>
-            <b>立即购买</b>
+            <b @click="buy">立即购买</b>
+        </div>
+        <div id="cover" v-show="show">
+            <p>
+            <span class="box1">是否确认加入购物车?</span>
+            <span class="box2"><b @click="cancel">取消</b><b @click="comfirm">确认</b></span>
+            </p>
         </div>
     </div>
 </template>
@@ -134,7 +140,8 @@
                 qty:1,
                 goodname:'',
                 price:'',
-                username:'Tom',
+                username:'',
+                show:false,
                 // color:false;
                 // size:false;
                 //图片列表[arr]
@@ -181,14 +188,14 @@
                 this.qty++;
                  
             },
-            putprice(){
-
+            cancel(){
+                this.show=false;
             },
-            carlist(){
-                    // this.username=window.sessionStorage.getItem('Tom')
+            comfirm(){
 
-
-                  $('#detailbody .shoe_color img').each((a,color)=>{
+                 this.username=window.sessionStorage.getItem('username');
+                if(this.username){
+                 $('#detailbody .shoe_color img').each((a,color)=>{
                     if(!$(color).attr('class')){
                         $('#detailbody .shoe_color b').text('请选择颜色！')
                        return false
@@ -196,26 +203,42 @@
                      $('#detailbody .shoe_size span').each((b,color)=>{
                         if($(color).attr('class')){
                            
-                              this.qty=$('#detailbody .shoe_qty input').val();
+                             // this.qty=$('#detailbody .shoe_qty input').val();
                              console.log(this.url,this.qty,this.goodname,this.price)
                              http.post('http://10.3.136.98:8080/shoppingcar',{url:this.url,qty:this.qty,goodname:this.goodname,price:this.price,username:this.username}).then((res2)=>{
                                  $('#detailbody .shoe_size i').text('');
-                                 // this.$router.push({path:''})
+                                 this.show=false;
+                                 this.$router.push({path:'/shoppingcart'})
                             })
                         }else{
                             $('#detailbody .shoe_size i').text('请选择尺码');
                         }   
                     })
-                 }) 
+                 })
+                }else{
+                   this.$router.push({path:'/Login'})
+                } 
+            },
+            carlist(){
+                  this.show=true;
             },
             fuck(){
-                  var a=document.getElementById('detailbody')
+                var a=document.getElementById('detailbody')
                 a.scrollTo(0, 1000)
             },
             fucker(){
-                 var a=document.getElementById('detailbody')
+                var a=document.getElementById('detailbody')
                 a.scrollTo(0, 0)
+            },
+            buy(){
+                 this.username=window.sessionStorage.getItem('username');
+                 if(this.username){
+                    this.$router.push({path:'/cart_cheackout'})
+                }else{
+                    this.$router.push({path:'/Login'})
+                }
             }
+
 
 
         }

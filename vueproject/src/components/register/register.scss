@@ -59,4 +59,38 @@
             }
         }
     }
+    .lx_tanchuang{
+        width: 414px;
+        height: 736px;
+        background: rgba(0,0,0,.6);
+        position: fixed;
+        top:0;
+        left:0;
+        display: none;
+        .lx_r_tishi{
+            margin:0 auto;
+            text-align: center;
+            font-size: 22px;
+            color:#fff;
+            position: absolute;
+            top:40%;
+            left:50%;
+            margin-left:-49px;
+        }
+        .lx_queren{
+            width: 0.563607rem;
+            height: 0.402576rem;
+            line-height: 0.402576rem;
+            text-align: center;
+            margin:0 auto;
+            background: rgba(254,0,0,.6);
+            position: absolute;
+            top:50%;
+            left:50%;
+            margin-top:-0.201288rem; 
+            margin-left:-0.281804rem; 
+            border-radius:0.064412rem;
+            font-size: 0.128824rem;
+        }
+    }
 }
