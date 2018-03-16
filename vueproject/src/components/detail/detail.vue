@@ -202,10 +202,10 @@
                     }
                      $('#detailbody .shoe_size span').each((b,color)=>{
                         if($(color).attr('class')){
-                           
-                             // this.qty=$('#detailbody .shoe_qty input').val();
+                            
                              console.log(this.url,this.qty,this.goodname,this.price)
                              http.post('http://10.3.136.98:8080/shoppingcar',{url:this.url,qty:this.qty,goodname:this.goodname,price:this.price,username:this.username}).then((res2)=>{
+                                    console.log(res2);
                                  $('#detailbody .shoe_size i').text('');
                                  this.show=false;
                                  this.$router.push({path:'/shoppingcart'})
@@ -221,6 +221,7 @@
             },
             carlist(){
                   this.show=true;
+                   this.qty=$('#detailbody .shoe_qty input').val()*1
             },
             fuck(){
                 var a=document.getElementById('detailbody')
@@ -233,7 +234,7 @@
             buy(){
                  this.username=window.sessionStorage.getItem('username');
                  if(this.username){
-                    this.$router.push({path:'/cart_cheackout'})
+                    this.$router.push({path:'/shoppingcart'})
                 }else{
                     this.$router.push({path:'/Login'})
                 }

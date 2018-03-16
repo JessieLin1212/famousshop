@@ -39,7 +39,47 @@
         </div>
         <button type="submit" class="btn btn-default" @click="mj_submit">提交</button>
       </form>
-      <cartb></cartb>
+      <h1 class="mj_qingdan">商品清单</h1>
+      <ul class="mj_cartgoods">
+<!-- {"_id":"5aaa302ceb7dd22d2c084d2c","url":"16.jpg","qty":10,"goodname":"adidas阿迪达斯 跑步鞋 男 学院藏青蓝+白+学院蓝","price":"799","username":"Tom"} -->
+                <li v-for="(obj,key) in goods">
+                    <span class="mj_pic">
+                        <router-link to=""><img :src="'/src/assets/back-stage-images.shop/'+obj.url" :data-url="obj.url"></router-link>
+                    </span>
+                    <span class="mj_con">
+                        <router-link to="" class="mj_name">{{obj.goodname}}</router-link>
+                        <i class="mj_d">尺码:41,颜色:1号黑色+碳黑</i>
+                        <p>
+                            <label>数量:</label>
+                            <span>
+                                {{obj.qty}}
+                            </span>
+                            <label>售价</label>
+                            ￥<span class="mj_price">{{obj.price}}</span>
+                        </p>
+                    </span>
+                </li>
+            </ul> 
+            <div class="mj_total">
+                <p style="color:#E58B4C; text-align:left; border-bottom:1px dotted #ccc;padding:0 10px 12px;margin:0 -10px 12px;">享受的优惠: 活动价 满300减30 满600减60</p>
+                <p>商品总数:<b ref="z_qty">{{zqty}}</b>　商品总额:<b>￥<i ref="t_price">{{totalprice}}</i></b></p>
+            </div>  
+      <div class="mj_pay">
+                <div class="mj_paycon">
+                   <!--  合计: <span id="payMoney" style="font-size:18px;">￥1068</span> -->
+                </div>
+                <div  class="mj_checkout" @click="mj_output"><router-link to="" >
+                    立即付款
+                </router-link>
+                </div>
+                
+            </div>
+        <cartb></cartb>
+        <div  class="mj_popWrap" v-show="show" >
+                <div class="mj_warn">支付成功！！！
+                </div>
+            </div>
+     
    </div>
 </template>
 
@@ -49,6 +89,8 @@
   import './css/base.css'
   import cartt from './cartt.vue'
   import citytext from './citytext.js'
+  import http from '../../httpClient/httpClient.js';
+  import router from '../../router/index.js'
    export default{
       data(){
            return{
@@ -60,14 +102,39 @@
               district: '越秀区',
               cityArr: [],
               districtArr: [],
-              arr: citytext.arrAll
+              arr: citytext.arrAll,
+              goods:[],
+              zqty:0,
+              totalprice:0,
+              show:false
             } 
+       },
+       mounted(){
+              let orderno=(location.href).split('cart_cheackout')[1].slice(1);
+              console.log(orderno);
+              http.post('getcarorder',{orderno}).then((res)=>{
+                console.log(res);
+                if(res.data.length>0){
+                  this.goods=res.data[0].products;
+                  for(var i=0;i<this.goods.length;i++){
+                    this.zqty = this.zqty+this.goods[i].qty*1;
+                    this.totalprice=this.totalprice+this.goods[i].qty*this.goods[i].price;
+                  }
+                }
+                console.log(this.goods)
+              })
        },
        components:{
             cartb,
             cartt
         },
        methods:{
+            mj_output(){
+                this.show = true;
+                setTimeout(function(){
+                  router.push('/shoppingcart');
+                }, 2000)
+            },
             mj_submit(){
               http.post('users',{username: this.mj_name, site: this.mj_site, phone: this.mj_phone}).then((res) => {
                 console.log(res)

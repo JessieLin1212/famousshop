@@ -1,16 +1,13 @@
 <template>
      <div class="mj_cart_b">
             <transition  tag="div" name="mj_pw"  >
-            <div  class="mj_popWrap" v-if="show">
-                <div class="mj_warn">支付成功！！！
-                </div>
-            </div>
+            
             </transition>
             <div class="mj_b_t">
-                <div class="mj_lr">
+                <!-- <div class="mj_lr">
                 <router-link to="Login">登录</router-link>
                 <router-link to="Register">注册</router-link>
-                </div> 
+                </div>  -->
                 <router-link to="homepage" class="mj_shouye">首页</router-link>
             </div>
             <div class="mj_menu">
@@ -42,15 +39,7 @@
                 <br/><span style="color:#999;">©2008-2015 s.cn 名鞋库 闽ICP备08106896号</span>
             </div>
 
-            <div class="mj_pay">
-                <div class="mj_paycon">
-                   <!--  合计: <span id="payMoney" style="font-size:18px;">￥1068</span> -->
-                </div>
-                <div @click="mj_output" class="mj_checkout"><router-link to="" >
-                去结算<!-- （2） -->
-                </router-link></div>
-                
-            </div>
+            
             
         </div>
 </template>
@@ -60,16 +49,17 @@
     import './shoppingcart.scss'
     import './font/icon.css'
     import './font/bootstrap.css'
+    import http from '../../httpClient/httpClient.js';
     export default {
         data(){
             return{
-                show: false
+                show: false,
+                
+                
             }
         },
         methods:{
-            mj_output(){
-                this.show = true;
-            }
+            
         }
     }
 </script>

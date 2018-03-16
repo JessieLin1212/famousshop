@@ -21,7 +21,7 @@
 
         <div ref="lx_tanchuang" class="lx_tanchuang">
           <div class="lx_r_tishi">注册成功！</div>
-          <div class="lx_queren" @click="$router.push({path:'/HomePage'})">确定</div>
+          <div class="lx_queren" @click="$router.push({path:'/Login'})">确定</div>
         </div>
 
       </div>

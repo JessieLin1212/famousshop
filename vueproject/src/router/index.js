@@ -46,10 +46,10 @@ const router = new VueRouter({
            {
               path:'/shoppingcart',
               name:'shoppingcart',
-              component:mj_shoppingcart
+              component:mj_shoppingcart,
            },
            {
-              path:'/cart_cheackout',
+              path:'/cart_cheackout/:orderno',
               name:'cart_cheackout',
               component:cart_cheackout
            },
@@ -57,6 +57,11 @@ const router = new VueRouter({
               path:'/Listdetail',
               name:'Listdetail',
               component:Listdetail,
+           },
+            {
+              path:'/shoppingcart/:orderno',
+              name:'shoppingcart',
+              component:mj_shoppingcart
            },
 
        ]

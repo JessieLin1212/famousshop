@@ -203,8 +203,10 @@
         
         <div class="lx_main_b">
           <div class="lx_loginbox">
-            <router-link to="/Login" href="">登录</router-link>
-            <router-link to="/reg" href="">注册</router-link>
+            <a v-if="username">{{username}}</a>
+            <a  v-else @click="$router.push({path:'/Login'})">登录</a>
+            <a v-if="username" @click="userclear">退出</a>
+            <a v-else @click="$router.push({path:'/reg'})">注册</a>
           </div>
           <ul class="lx_service">
             <li>
@@ -325,6 +327,7 @@
   export default{
       data(){
           return{
+              username:'',
               text:'这是首页组件',
               paobuxie:[],
               xiuxianxie:[],
@@ -374,6 +377,11 @@
           slider
       },
       methods:{
+        userclear(){
+            window.sessionStorage.removeItem('username');
+            this.username='';
+            this.$router.push({path:'./HomePage'})
+        },
           getmsg(){
               this.$store.dispatch('getmsg_get',{path:'product/',msg:{houseOwner:'Kemo'}});
           },
@@ -404,7 +412,9 @@
           }
       },
       mounted(){
-
+         if(window.sessionStorage.getItem('username')){
+          this.username=window.sessionStorage.getItem('username')
+        }
         let top = this.$refs.lx_totop;
         window.onscroll = function(){
 

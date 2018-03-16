@@ -4,7 +4,7 @@
             <cartt></cartt>
             <ul class="mj_cartList">
 <!-- {"_id":"5aaa302ceb7dd22d2c084d2c","url":"16.jpg","qty":10,"goodname":"adidas阿迪达斯 跑步鞋 男 学院藏青蓝+白+学院蓝","price":"799","username":"Tom"} -->
-                <li v-for="(obj,idx) in goodslist">
+                <li v-for="(obj,idx) in goodslist" :key="idx">
                     <span class="mj_pic">
                         <router-link to=""><img :src="'/src/assets/back-stage-images.shop/'+obj.url" :data-url="obj.url"></router-link>
                     </span>
@@ -33,6 +33,18 @@
             </div>
         </div>
         <cartb></cartb>
+        <div class="mj_pay">
+                <div class="mj_paycon" @click="getpayment">
+                   生成订单
+                </div>
+                <router-link style="color:#fff;" class="mj_checkout" :to ="'/cart_cheackout/' + orderno">
+                去结算<!-- （2） -->
+                </router-link>
+            </div>
+            <div  class="mj_popWrap" v-show="show" >
+                <div class="mj_warn">生成订单号{{orderno}}成功！！！
+                </div>
+            </div>
     </div>
     
    
@@ -51,11 +63,11 @@
     import cartt from './cartt.vue'
     export default{
         mounted(){
-
-            http.get('sercar').then((res) =>{
-                this.username = res.data[0].username;console.log(this.username)
+            var username=window.sessionStorage.getItem('username')
+            http.post('sercar',{username}).then((res) =>{
+                this.username = res.data[0].username;
                 this.id = res.data[0]._id;
-                this.goodslist = res.data;
+                this.goodslist = res.data;console.log(this.goodslist)
                 for(var i=0;i<this.goodslist.length;i++){
                     this.zqty = this.zqty+this.goodslist[i].qty*1;
                     this.totalprice=this.totalprice+this.goodslist[i].qty*this.goodslist[i].price;
@@ -69,7 +81,8 @@
                 qty: '',
                 username:"",
                 zqty:0,
-                totalprice:0
+                totalprice:0,
+                orderno:'00'
             }
         },
         components:{
@@ -77,6 +90,24 @@
             cartt
         },
         methods: {
+            getpayment(){
+                this.show=true;
+                setTimeout(function(){
+                    this.show =false;
+                }, 2000)
+                let username=window.sessionStorage.getItem('username');
+                http.post('payment',{username}).then(res=>{
+                    console.log(res.data.result.ops[0].orderno);
+                    let _orderno=res.data.result.ops[0].orderno;
+                    this.orderno=_orderno;
+                    console.log(this.orderno);
+                })
+                setTimeout(function(){
+                    http.post('delallcarproducts',{username}).then((res) =>{
+                        
+                    })
+                },2000)
+            },
             del(e){
                 // let username = this.username;
                 // let url =e.target.parentElement.parentElement.previousElementSibling.children[0].children[0].dataset.url;
@@ -100,7 +131,7 @@
                 http.post('operation',{username,url,equal:'a'}).then((res) =>{
                     this.$refs.z_qty.innerText=this.$refs.z_qty.innerText*1+1;
                     this.$refs.t_price.innerText=this.$refs.t_price.innerText*1+e.target.parentElement.parentElement.nextElementSibling.children[1].innerText*1;
-                    console.log(e.target.parentElement.parentElement.nextElementSibling.children[1])
+                    // console.log(e.target.parentElement.parentElement.nextElementSibling.children[1])
                     // e.target.parentElement.parentElement.nextElementSibling.children[1].innerText*1+=
                 });
             },

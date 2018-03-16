@@ -3,10 +3,12 @@
     min-weight:320px;
     max-weight:640px;
     background:#F0F0F0;
+    // overflow:hidden;
     height: 100%;
     font-size:15px;
 }
 .mj_cart_t{
+    background:#F0F0F0;
     .mj_categoryCon{
         
         a{
@@ -90,7 +92,7 @@
         }
     }
     .mj_cartList{
-        // overflow-y:scroll;
+        background:#F0F0F0;
         li{
             padding: 14px 10px 10px;
             border-bottom:1px dotted #ccc;
@@ -296,8 +298,8 @@
     z-index: 1;
     .mj_paycon{
         -webkit-box-flex: 1;
-        font-size: 12px;
-        text-align: left;
+        font-size: 18px;
+        text-align: center;
         padding-left: 9px;
         width: 62.5%;
         line-height: 40px;
@@ -318,4 +320,96 @@
 .mj_form{
     background:#F0F0F0;
     padding:0 10px 10px;
+    label{
+        color: #999;
+        text-shadow: 1px 1px 1px #fff;
+    }
 }
+.mj_qingdan{
+    font-size: 16px;
+    line-height: 26px;
+    color: #999;
+    text-shadow: 1px 1px 1px #fff;
+}
+.mj_cartgoods{
+            margin: 12px 10px 8px;
+        background:#F0F0F0;
+        border-radius: 4px;
+        li{
+            border-radius: 6px;
+            line-height: 19px;
+            font-size: 14px;
+            margin: 12px 10px 8px;
+            background:#fff;
+            border-bottom-style:1px dotted #ccc;
+            display:flex;
+            a{
+                color:black;
+            }
+            span{
+                padding: 12px 10px 8px;
+            }
+        }
+        .mj_price{
+            color:red;
+            font-weight:bold;
+        }
+        .mj_pic{
+            min-width: 75px;
+            display:block;
+            margin-right: 10px;
+            a{
+                display:block;
+                border-bottom-style:1px dotted #ccc;
+                border-radius: 6px;
+            }
+        }
+        .mj_con{
+            display:block;
+            min-width: 280px;
+            -webkit-box-flex: 1;
+            .mj_name{
+                display: block;
+                max-height: 38px;
+                overflow: hidden;
+                line-height: 19px;
+            }
+            .mj_d{
+                display:block;
+                margin: 7px 0;
+                color:#ddd;
+            }
+            p{
+                position:relative;
+                line-height: 28px;
+                label{
+                    min-width: 30px;
+                    text-align: right;
+                }
+                .mj_del{
+                    position:absolute;
+                    left: 80%;top: 0;
+                    background: #F7F7F7;
+                    height: 18px;
+                    line-height: 18px;
+                    border: 1px solid #e0e0e0;
+                    margin-top: 4px;
+                    padding: 0 3px;
+                    border-radius: 4px;
+                    color: #999;
+                    font-size: 12px;
+                }
+                i{
+                    display: inline-block;
+                    border: 1px solid #cfcfcf;
+                    height: 22px;
+                    width: 22px;
+                    background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff         ),to(#efefef));
+                    position: relative;
+                }
+            }
+        }
+        img{
+            width: 75px; height: 75px;
+        }
+    }
