@@ -72,7 +72,7 @@
 				this.show=false;
 			})
 
-			http.get('http://10.3.136.7:2880/src/dictionary/common.txt').then(res=>{
+			http.get('http://localhost:2880/src/dictionary/common.txt').then(res=>{
                 this.dictionary=res.data;
             })
 		},

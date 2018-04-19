@@ -54,12 +54,12 @@
             $('#linav').on('click','span',function(){
                 $(this).addClass('active').siblings().removeClass('active')
             })
-           http.get('http://10.3.136.98:8080/product',{style:this.style,type:this.type}).then((res)=>{
+           http.get('http://localhost:8080/product',{style:this.style,type:this.type}).then((res)=>{
                 // console.log(res.data.data)
                 this.dataset=res.data.data;
            })
            if(this.name){
-               http.get('http://10.3.136.98:8080/product',{name:this.name}).then((res)=>{
+               http.get('http://localhost:8080/product',{name:this.name}).then((res)=>{
                 // console.log(res.data.data)
                 this.dataset=res.data.data;
                 })
@@ -69,36 +69,36 @@
        
         methods:{
             selstyle(){
-                http.get('http://10.3.136.98:8080/product',{style:this.style}).then((res)=>{
+                http.get('http://localhost:8080/product',{style:this.style}).then((res)=>{
                     this.dataset=res.data.data;
                 })
             },
             seltype(){
-                http.get('http://10.3.136.98:8080/product',{type:this.type}).then((res)=>{
+                http.get('http://localhost:8080/product',{type:this.type}).then((res)=>{
                     this.dataset=res.data.data;
                 })
             },
             lisearch(){
                 if($('#liheader input').val()){
                     let name=$('#liheader input').val();
-                    http.get('http://10.3.136.98:8080/product',{name:name}).then((res)=>{
+                    http.get('http://localhost:8080/product',{name:name}).then((res)=>{
                     this.dataset=res.data.data;
                         })
                 }
             },
             normal(){
-                  http.get('http://10.3.136.98:8080/product',{style:this.style,type:this.type}).then((res)=>{
+                  http.get('http://localhost:8080/product',{style:this.style,type:this.type}).then((res)=>{
                 
                 this.dataset=res.data.data;
             })
             },
             pricesort(){
-                http.get('http://10.3.136.98:8080/sort',{style:this.style,type:this.type}).then((res)=>{
+                http.get('http://localhost:8080/sort',{style:this.style,type:this.type}).then((res)=>{
                      this.dataset=res.data.data;
                 })
             },
             qtysort(){
-                 http.get('http://10.3.136.98:8080/qty',{style:this.style,type:this.type}).then((res)=>{
+                 http.get('http://localhost:8080/qty',{style:this.style,type:this.type}).then((res)=>{
                      this.dataset=res.data.data;
                 })
             },

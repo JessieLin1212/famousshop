@@ -105,7 +105,7 @@
                     
 
             // })
-            http.get('http://10.3.136.98:8080/search',{id:this.objid}).then((res)=>{
+            http.get('http://localhost:8080/search',{id:this.objid}).then((res)=>{
                 this.dataset=res.data.data[0];
                 this.url=this.dataset.url;
                 this.goodname=this.dataset.name;
@@ -204,7 +204,7 @@
                         if($(color).attr('class')){
                             
                              console.log(this.url,this.qty,this.goodname,this.price)
-                             http.post('http://10.3.136.98:8080/shoppingcar',{url:this.url,qty:this.qty,goodname:this.goodname,price:this.price,username:this.username}).then((res2)=>{
+                             http.post('http://localhost:8080/shoppingcar',{url:this.url,qty:this.qty,goodname:this.goodname,price:this.price,username:this.username}).then((res2)=>{
                                     console.log(res2);
                                  $('#detailbody .shoe_size i').text('');
                                  this.show=false;

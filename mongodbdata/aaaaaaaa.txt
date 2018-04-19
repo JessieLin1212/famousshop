@@ -1,0 +1,1 @@
+mongoexport -d famous-shop -c product -o D:\data\product.dat

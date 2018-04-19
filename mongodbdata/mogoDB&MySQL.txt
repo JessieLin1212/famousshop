@@ -1,0 +1,28 @@
+10.3.136.98
+
+
+10.3.133.133
+
+
+10.3.133.201
+
+
+10.3.136.7
+
+
+localhost
+
+
+mongoimport -d famous-shop -c backend E:\qianphone\kejian\aaa\data\product1.dat
+
+
+INSERT INTO goods
+(title,sale_price,goods_price,color,img,img1,img2,img3)
+VALUES("BASTO/百思图2018夏季专柜同款棕色牛剖层皮革毛球休闲女单肩包X1484BN8",
+'568',
+'999',
+'棕色',
+'../picture/goodslist36.jpg',
+'../picture/goodslist36_1.jpg',
+'../picture/goodslist36_2.jpg',
+'../picture/goodslist36_3.jpg')

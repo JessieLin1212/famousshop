@@ -1,5 +1,5 @@
 import axios from 'axios';
-const baseUrl="http://10.3.136.98:8080";
+const baseUrl="http://localhost:8080";
 // const baseUrl="http://localhost:8080";
 import router from '../router/router.js';
 export default {

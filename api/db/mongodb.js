@@ -5,7 +5,7 @@ const ObjectID = mongo.ObjectID;
 
 
 let db 
-client.connect('mongodb://10.3.136.98:27017', (_error,client) => {
+client.connect('mongodb://localhost:27017', (_error,client) => {
     if(_error){
         return false;
     } else {
